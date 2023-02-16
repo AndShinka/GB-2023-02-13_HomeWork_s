@@ -36,16 +36,6 @@ int ReadNum (string message)
     return int.Parse(Console.ReadLine()!);
 }
 
-int ComputeDiagonal(int[,] mass)
-{
-    int sumDiagonal = 0;
-    for (int i = 0; i < mass.GetLength(0); i++)
-    {
-       sumDiagonal += mass[i, i];
-    }
-    return sumDiagonal;
-}
-
 int sizeM = ReadNum("Enter massive size m:"!);
 int sizeN = ReadNum("Enter massive size n:"!);
 double[,] array = CreateMass(sizeM, sizeN);
@@ -54,11 +44,3 @@ Console.WriteLine($"Двумерный массив размером {sizeM} X {
 PrintMass(array);
 Console.WriteLine();
 
-// double[] CreateArray(int lenght, int hightest)
-// {
-//     Random rndm = new Random();
-//     double[] array = new double[lenght];
-//     for (int i = 0; i < array.Length; i++)
-//         array[i] = rndm.NextDouble() * (hightest + 1);
-//     return array;
-// }
